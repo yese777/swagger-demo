@@ -57,7 +57,7 @@ public class SwaggerConfig {
                 .build();
     }
 
-    
+
     //分组,合作开发
     @Bean
     public Docket group1() {

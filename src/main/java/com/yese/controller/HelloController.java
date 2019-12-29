@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-
-    //只要接口中的返回值中存在实体类,就会被扫描到swagger中
     @ApiOperation("获取用户")
     @GetMapping("/user")
     public User user() {
@@ -24,7 +22,7 @@ public class HelloController {
         return "用户名是:" + username;
     }
 
-    //只要接口中的返回值中存在实体类,就会被扫描到swagger中
+    //只要接口中返回值中存在实体类,就会被扫描到swagger中
     @ApiOperation("添加用户")
     @PostMapping("/addUser")
     public User addUser(@ApiParam("用户") User user) {
