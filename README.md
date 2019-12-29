@@ -1,6 +1,6 @@
 # swagger-demo
 
-该项目为springboot整合swagger的小demo
+springboot2.2.2.RELEASE整合swagger2.9.2
 
 
 
