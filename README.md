@@ -4,7 +4,7 @@ springboot2.2.2.RELEASE整合swagger2.9.2
 
 
 
-swagger作用:实时生成API文档及接口测试
+swagger的作用:实时生成API文档及接口测试
 
 代码即接口文档，接口文档即代码。 
 
