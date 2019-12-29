@@ -22,8 +22,9 @@ public class SwaggerConfig {
 
         //设置要显示swagger的环境
         Profiles profiles = Profiles.of("dev", "test");
+        //判断当前环境是否为要显示swagger的环境
         boolean flag = environment.acceptsProfiles(profiles);
-        System.out.println("当前环境是否开启swagger:" + flag);
+        //System.out.println("当前环境是否开启swagger:" + flag);
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
@@ -31,24 +32,18 @@ public class SwaggerConfig {
                 .groupName("yese")
                 //是否开启
                 //.enable(flag)
-                //此处因没有多环境配置,所以直接开启
+                //此处因没有配置多环境,所以直接开启
                 .enable(true)
                 .select()
-                //RequestHandlerSelectors:配置要扫描的接口的方式
+                //RequestHandlerSelectors:配置要扫描的接口的方式,basePackage扫描包
                 .apis(RequestHandlerSelectors.basePackage("com.yese.controller"))
-                //过滤什么路径
+                //过滤路径
                 .paths(PathSelectors.any())
                 .build();
         //return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class)).build();
     }
 
-    //分组,合作开发
-    @Bean
-    public Docket group1() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("张三");
-    }
-
-    //构建 api文档的详细信息函数,注意这里的注解引用的是哪个
+    //构建 api文档的详细信息
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
@@ -60,6 +55,13 @@ public class SwaggerConfig {
                 //描述
                 .description("API 描述")
                 .build();
+    }
+
+    
+    //分组,合作开发
+    @Bean
+    public Docket group1() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("张三");
     }
 
 }

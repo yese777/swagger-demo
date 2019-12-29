@@ -1,8 +1,12 @@
 # swagger-demo
 
-该项目为springboot整合swagger
+该项目为springboot整合swagger的小demo
 
-swagger作用:实时生成API文档及接口测试测试
+
+
+swagger作用:实时生成API文档及接口测试
+
+代码即接口文档，接口文档即代码。 
 
 **注意**:在正式发布的时候配置类中要关闭swagger(处于安全考虑)
 
