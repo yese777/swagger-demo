@@ -34,5 +34,3 @@ swagger作用:实时生成API文档及接口测试
 3.在controller层的方法上添加注解
 
 4.启动项目后,访问页面: http://localhost:8080/swagger-ui.html 
-
-![](C:/Users/zqf/OneDrive/笔记/assets/Snipaste_2019-12-29_16-02-42.png)
