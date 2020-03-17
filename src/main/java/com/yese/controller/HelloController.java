@@ -13,7 +13,7 @@ public class HelloController {
     @ApiOperation("获取用户")
     @GetMapping("/user")
     public User user() {
-        return new User(1, "张三");
+        return new User("1", "张三");
     }
 
     @ApiOperation("获取用户名")
